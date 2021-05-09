@@ -1,0 +1,25 @@
+   <%- include ('includes/header.ejs') %>
+</head>
+<body>
+   <%- include ('includes/nav.ejs') %>
+   <main>
+      <div class="card mb-3" style="max-width: 540px;">
+         <div class="row g-0">
+           <div class="col-md-4">
+            <img src="<%= car.imgUrl %>" class="img-card-responsive" alt="<%= car.name %>">
+           </div>
+           <div class="col-md-8">
+             <div class="card-body">
+               <h5 class="card-title"><%= car.name %></h5>
+               <p class="card-text"><%= car.description %></p><hr>
+               <p class="card-text"><small class="text-muted">Produced: <%= car.dates[0] %> <% if (car.dates[1]) { %>- <%= car.dates[1] %> <% } %></small></p><hr>
+               <p class="card-text"><small class="text-muted">Number: <%= car.number %></small></p><hr>
+               <p class="card-text"><small class="text-muted">Price: $<%= car.price %></small></p>
+               <a href='/' class="btn btn-sm btn-outline-secondary">Return</a>
+             </div>
+           </div>
+         </div>
+       </div>
+   </main>
+
+<%- include ('includes/footer.ejs') %>
